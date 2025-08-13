@@ -324,7 +324,7 @@ public class DeviceConnFactoryManager {
                 //开启计时器，隔2000毫秒没有没返回值时发送查询打印机状态指令，先发票据，面单，标签
                 final ThreadFactoryBuilder threadFactoryBuilder = new ThreadFactoryBuilder("Timer");
                 final ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(1, threadFactoryBuilder);
-                scheduledExecutorService.scheduleAtFixedRate(threadFactoryBuilder.newThread(new Runnable() {
+                scheduledExecutorService.scheduleWithFixedDelay(threadFactoryBuilder.newThread(new Runnable() {
                     @Override
                     public void run() {
                         if (currentPrinterCommand == null && queryPrinterCommandFlag > TSC) {

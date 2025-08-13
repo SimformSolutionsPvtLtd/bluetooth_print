@@ -1,3 +1,6 @@
+## 5.0.0
+* Refactored BluetoothPrintPlugin for V2 and updated dependencies.
+
 ## 4.2.0
 
 * opt permission check
